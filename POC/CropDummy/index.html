@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="croppie.css" />
+    <script src="croppie.js"></script>
+</head>
+<body>
+
+<script>
+    function demoBasic() {
+        var $w = $('.basic-width'),
+            $h = $('.basic-height'),
+            basic = $('#demo-basic').croppie({
+                viewport: {
+                    width: 150,
+                    height: 200
+                },
+                boundary: {
+                    width: 300,
+                    height: 300
+                }
+            });
+        basic.croppie('bind', {
+            url: 'test1.jpg',
+            points: [1924,1161,2069,992]
+        });
+
+        $('.basic-result').on('click', function() {
+            var w = parseInt($w.val(), 10),
+                h = parseInt($h.val(), 10),s
+            size = 'viewport';
+            if (w || h) {
+                size = { width: w, height: h };
+            }
+            basic.croppie('result', {
+                type: 'canvas',
+                size: size,
+                resultSize: {
+                    width: 50,
+                    height: 50
+                }
+            }).then(function (resp) {
+                popupResult({
+                    src: resp
+                });
+            });
+        });
+    }
+</script>
+<h1>Test</h1>
+<div id="demo-basic" class="basic-width basic-height"></div>
+<img src="test1.jpg" style="max-width:300px;">
+<div></div>
+<button type="button" onclick="demoBasic()">Klik mig</button>
+</body>
+</html>
