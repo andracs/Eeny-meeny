@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="demo"></p>
+
+
+<script>
+
+    // URL dummy_image_data.json
+    //faceAnnotations[boundingPoly].vertices[0].x
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var myObj = JSON.parse(this.responseText);
+            var xa = myObj.faceAnnotations[0].boundingPoly.vertices[0].x;
+            var ya = myObj.faceAnnotations[0].boundingPoly.vertices[0].y;
+            var xb = myObj.faceAnnotations[0].boundingPoly.vertices[1].x;
+            var yb = myObj.faceAnnotations[0].boundingPoly.vertices[1].y;
+            document.getElementById("demo").innerHTML = JSON.stringify(" "+ xa + " - " + xb );
+        }
+    };
+    xmlhttp.open("GET", "dummy_image_data.json", true);
+    xmlhttp.send();
+</script>
+</body>
+</html>
