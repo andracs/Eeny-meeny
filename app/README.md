@@ -1,3 +1,6 @@
+OBS: Github genkender ikke navn ved commits "Your Name" skal forstås som alirazi25 :D 
+
+
 # Hello World PhoneGap Template [![bitHound Score][bithound-img]][bithound-url]
 
 A PhoneGap Hello World template
