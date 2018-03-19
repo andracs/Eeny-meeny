@@ -6,9 +6,10 @@
 
     <style>
 
-        #header{
+        .header{
+            font-size: 32px;
             font-style: normal;
-            font-family: "Times New Roman";
+            font-family: "Courier New", Courier, monospace;
             color: darkblue;
             text-align: center;
         }
@@ -18,16 +19,42 @@
             margin-left: auto;
             margin-right: auto;
         }
+
+
+        #helpbody {
+            background-color: black;
+        }
+
+        .Back {
+            border: none;
+            color: darkblue;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 32px;
+            font-family: "Courier New", Courier, monospace;
+            margin: 4px 2px;
+            cursor: pointer;
+            background-color: black;
+
+        }
+        .Back:hover {
+            background-color: white;
+        }
     </style>
 </head>
 
 
+<body id="helpbody">
+<h1 class="header"> If you need help, Talk to a professional</h1>
 
 
-<body>
-<h1 id="header"> If you need help, Talk to a professional</h1>
 
 
-<img id="think" src="resources/thinking.gif" alt="think" height="400" width="500">
+<img id="think" src="resources/megaThonk.gif" alt="think" height="425" width="875">
+
+<h1 class="header"> Or you can wait on the Tutorial! </h1>
+<a href="index-nd.html"><button class="Back"> <-- Go back!</button></a>
 </body>
 </html>
