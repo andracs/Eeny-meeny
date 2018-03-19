@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +9,7 @@
 
 <script type="text/javascript">
     $(function() {
+        var subscriptionKey = "9f8c03ea36db4e2b9c2033ef660b2374";
         var params = {
             // Request parameters
         };
@@ -19,20 +19,26 @@
             beforeSend: function(xhrObj){
                 // Request headers
                 xhrObj.setRequestHeader("Content-Type","application/json");
-                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","9f8c03ea36db4e2b9c2033ef660b2374");
+                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key",subscriptionKey);
             },
             type: "POST",
             // Request body
-            data: "{faceID1: 234, faceID2:234}",
+            data: '{"faceId1": "fba4b5c6-ef1f-4739-bb38-4458d1555bc8" ,"faceId2" : "a3140daf-7d43-4e56-8d5e-c407d67ce9cc"} ',
         })
             .done(function(data) {
                 alert("success");
+                $("#responseTextArea").val(JSON.stringify(data, null, 2));
             })
             .fail(function() {
+                // Display error message.
+                var errorString = (errorThrown === "") ? "Error. " : errorThrown + " (" + jqXHR.status + "): ";
+                errorString += (jqXHR.responseText === "") ? "" : (jQuery.parseJSON(jqXHR.responseText).message) ?
+                    jQuery.parseJSON(jqXHR.responseText).message : jQuery.parseJSON(jqXHR.responseText).error.message;
+                alert(errorString);
                 alert("error");
             });
     });
 </script>
 </body>
+<textarea id="responseTextArea" class="UIInput" style="width:580px; height:400px;"></textarea>
 </html>
-
