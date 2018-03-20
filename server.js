@@ -3,6 +3,11 @@
 
 // Googole sdk + auth https://cloud.google.com/vision/docs/auth
 // API Token = 'API_TOKEN/googleapi.json'
+//setup step 1: opdater gcloud;  gcloud components update
+//step 2: få token; gcloud auth activate-service-account --key-file .\API_TOKEN\googleapi.json
+//step 3 env varialbel (powershell) $env:GOOGLE_APPLICATION_CREDENTIALS =".\API_TOKEN\googleapi.json"
+//step 4: node .\server.js
+
 
 // Imports the Google Cloud client library
 const vision = require('@google-cloud/vision');
