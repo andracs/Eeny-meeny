@@ -113,3 +113,83 @@ body {
     float: right;
     margin-right: 25px;
 }
+
+
+
+/* CSS for the Index-nd.HTML file */
+
+.picturebutton {
+
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 1px 1px black;
+    display: inline-block;
+    font-size: 16px;
+    font-variant: small-caps;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+
+.picturebutton:hover {
+    background-color: #685a8b;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+
+
+}
+
+
+.makerow {
+
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 1px 1px black;
+    display: inline-block;
+    font-size: 16px;
+    font-variant: small-caps;
+    margin: 4px 2px;
+    cursor: pointer;
+
+
+
+}
+
+.makerow:hover {
+    background-color: #685a8b;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+.backgroundcolor {background-color: #1C5299;} /* Blue */
+.backgroundcolor1{background-color: #1C5299;}
+
+.BackgroundColor {
+    background-color: #6492E8;
+}
+
+#testPhoto {
+    border-radius: 10px;
+}
+
+
+/* CSS for the TakePicture.HTML file */
+
+#startinfo {
+    font-variant: small-caps;
+    font-size: 36px;
+    text-align: center;
+    text-shadow: 1px 1px black;
+    color: darkblue;
+}
+
+
+#TakePictureBody {
+    background-color: #6492E8;
+}
+
