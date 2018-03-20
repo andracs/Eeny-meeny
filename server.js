@@ -1,6 +1,8 @@
 //Setup npm install --save @google-cloud/vision
 // npm install --save jimp
 
+// Googole sdk + auth https://cloud.google.com/vision/docs/auth
+// API Token = 'API_TOKEN/googleapi.json'
 
 // Imports the Google Cloud client library
 const vision = require('@google-cloud/vision');
