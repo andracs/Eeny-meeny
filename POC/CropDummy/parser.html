@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="face1"></p>
+<p id="face1.1"></p>
+<p id="face2"></p>
+<p id="face2.1"></p>
+<p id="face3"></p>
+<p id="face3.1"></p>
+<p id="face4"></p>
+<p id="face4.1"></p>
+<p id="face5"></p>
+<p id="face5.1"></p>
+
+
+<script class="face1">
+
+    // URL dummy_image_data.json
+    //faceAnnotations[boundingPoly].vertices[0].x
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var myObj = JSON.parse(this.responseText);
+            var x1 = myObj.faceAnnotations[0].boundingPoly.vertices[0].x;
+            var y1 = myObj.faceAnnotations[0].boundingPoly.vertices[0].y;
+            var x2 = myObj.faceAnnotations[0].boundingPoly.vertices[1].x;
+            var y2 = myObj.faceAnnotations[0].boundingPoly.vertices[1].y;
+            var x3 = myObj.faceAnnotations[0].boundingPoly.vertices[2].x;
+            var y3 = myObj.faceAnnotations[0].boundingPoly.vertices[2].y;
+            var x4 = myObj.faceAnnotations[0].boundingPoly.vertices[3].x;
+            var y4 = myObj.faceAnnotations[0].boundingPoly.vertices[3].y;
+
+            var x5 = myObj.faceAnnotations[0].fdBoundingPoly.vertices[0].x;
+            var y5 = myObj.faceAnnotations[0].fdBoundingPoly.vertices[0].y;
+            var x6 = myObj.faceAnnotations[0].fdBoundingPoly.vertices[1].x;
+            var y6 = myObj.faceAnnotations[0].fdBoundingPoly.vertices[1].y;
+            var x7 = myObj.faceAnnotations[0].fdBoundingPoly.vertices[2].x;
+            var y7 = myObj.faceAnnotations[0].fdBoundingPoly.vertices[2].y;
+            var x8 = myObj.faceAnnotations[0].fdBoundingPoly.vertices[3].x;
+            var y8 = myObj.faceAnnotations[0].fdBoundingPoly.vertices[3].y;
+            document.getElementById("face1").innerHTML = JSON.stringify("Face 1 <br>"+ x1 + " - " + y1 + " <br> " + x2 + " - " + y2 + " <br> " + x3 + " - " + y3 + " <br> " + x4 + " - " + y4);
+            document.getElementById("face1.1").innerHTML = JSON.stringify(" "+ x5 + " - " + y5 + " <br> " + x6 + " - " + y6 + " <br> " + x7 + " - " + y7 + " <br> " + x8 + " - " + y8);
+         }
+    };
+    xmlhttp.open("GET", "dummy_image_data.json", true);
+    xmlhttp.send();
+</script>
+
+<script class="face2">
+
+    // URL dummy_image_data.json
+    //faceAnnotations[boundingPoly].vertices[0].x
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var myObj = JSON.parse(this.responseText);
+            var x1 = myObj.faceAnnotations[1].boundingPoly.vertices[0].x;
+            var y1 = myObj.faceAnnotations[1].boundingPoly.vertices[0].y;
+            var x2 = myObj.faceAnnotations[1].boundingPoly.vertices[1].x;
+            var y2 = myObj.faceAnnotations[1].boundingPoly.vertices[1].y;
+            var x3 = myObj.faceAnnotations[1].boundingPoly.vertices[2].x;
+            var y3 = myObj.faceAnnotations[1].boundingPoly.vertices[2].y;
+            var x4 = myObj.faceAnnotations[1].boundingPoly.vertices[3].x;
+            var y4 = myObj.faceAnnotations[1].boundingPoly.vertices[3].y;
+
+            var x5 = myObj.faceAnnotations[1].fdBoundingPoly.vertices[0].x;
+            var y5 = myObj.faceAnnotations[1].fdBoundingPoly.vertices[0].y;
+            var x6 = myObj.faceAnnotations[1].fdBoundingPoly.vertices[1].x;
+            var y6 = myObj.faceAnnotations[1].fdBoundingPoly.vertices[1].y;
+            var x7 = myObj.faceAnnotations[1].fdBoundingPoly.vertices[2].x;
+            var y7 = myObj.faceAnnotations[1].fdBoundingPoly.vertices[2].y;
+            var x8 = myObj.faceAnnotations[1].fdBoundingPoly.vertices[3].x;
+            var y8 = myObj.faceAnnotations[1].fdBoundingPoly.vertices[3].y;
+            document.getElementById("face2").innerHTML = JSON.stringify("Face 2 <br> "+ x1 + " - " + y1 + " <br> " + x2 + " - " + y2 + " <br> " + x3 + " - " + y3 + " <br> " + x4 + " - " + y4);
+            document.getElementById("face2.1").innerHTML = JSON.stringify(" "+ x5 + " - " + y5 + " <br> " + x6 + " - " + y6 + " <br> " + x7 + " - " + y7 + " <br> " + x8 + " - " + y8);
+        }
+    };
+    xmlhttp.open("GET", "dummy_image_data.json", true);
+    xmlhttp.send();
+</script>
+
+<script class="face3">
+
+    // URL dummy_image_data.json
+    //faceAnnotations[boundingPoly].vertices[0].x
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var myObj = JSON.parse(this.responseText);
+            var x1 = myObj.faceAnnotations[2].boundingPoly.vertices[0].x;
+            var y1 = myObj.faceAnnotations[2].boundingPoly.vertices[0].y;
+            var x2 = myObj.faceAnnotations[2].boundingPoly.vertices[1].x;
+            var y2 = myObj.faceAnnotations[2].boundingPoly.vertices[1].y;
+            var x3 = myObj.faceAnnotations[2].boundingPoly.vertices[2].x;
+            var y3 = myObj.faceAnnotations[2].boundingPoly.vertices[2].y;
+            var x4 = myObj.faceAnnotations[2].boundingPoly.vertices[3].x;
+            var y4 = myObj.faceAnnotations[2].boundingPoly.vertices[3].y;
+
+            var x5 = myObj.faceAnnotations[2].fdBoundingPoly.vertices[0].x;
+            var y5 = myObj.faceAnnotations[2].fdBoundingPoly.vertices[0].y;
+            var x6 = myObj.faceAnnotations[2].fdBoundingPoly.vertices[1].x;
+            var y6 = myObj.faceAnnotations[2].fdBoundingPoly.vertices[1].y;
+            var x7 = myObj.faceAnnotations[2].fdBoundingPoly.vertices[2].x;
+            var y7 = myObj.faceAnnotations[2].fdBoundingPoly.vertices[2].y;
+            var x8 = myObj.faceAnnotations[2].fdBoundingPoly.vertices[3].x;
+            var y8 = myObj.faceAnnotations[2].fdBoundingPoly.vertices[3].y;
+            document.getElementById("face3").innerHTML = JSON.stringify("Face 3 <br> "+ x1 + " - " + y1 + " <br> " + x2 + " - " + y2 + " <br> " + x3 + " - " + y3 + " <br> " + x4 + " - " + y4);
+            document.getElementById("face3.1").innerHTML = JSON.stringify(" "+ x5 + " - " + y5 + " <br> " + x6 + " - " + y6 + " <br> " + x7 + " - " + y7 + " <br> " + x8 + " - " + y8);
+        }
+    };
+    xmlhttp.open("GET", "dummy_image_data.json", true);
+    xmlhttp.send();
+</script>
+
+<script class="face4">
+
+    // URL dummy_image_data.json
+    //faceAnnotations[boundingPoly].vertices[0].x
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var myObj = JSON.parse(this.responseText);
+            var x1 = myObj.faceAnnotations[3].boundingPoly.vertices[0].x;
+            var y1 = myObj.faceAnnotations[3].boundingPoly.vertices[0].y;
+            var x2 = myObj.faceAnnotations[3].boundingPoly.vertices[1].x;
+            var y2 = myObj.faceAnnotations[3].boundingPoly.vertices[1].y;
+            var x3 = myObj.faceAnnotations[3].boundingPoly.vertices[2].x;
+            var y3 = myObj.faceAnnotations[3].boundingPoly.vertices[2].y;
+            var x4 = myObj.faceAnnotations[3].boundingPoly.vertices[3].x;
+            var y4 = myObj.faceAnnotations[3].boundingPoly.vertices[3].y;
+
+            var x5 = myObj.faceAnnotations[3].fdBoundingPoly.vertices[0].x;
+            var y5 = myObj.faceAnnotations[3].fdBoundingPoly.vertices[0].y;
+            var x6 = myObj.faceAnnotations[3].fdBoundingPoly.vertices[1].x;
+            var y6 = myObj.faceAnnotations[3].fdBoundingPoly.vertices[1].y;
+            var x7 = myObj.faceAnnotations[3].fdBoundingPoly.vertices[2].x;
+            var y7 = myObj.faceAnnotations[3].fdBoundingPoly.vertices[2].y;
+            var x8 = myObj.faceAnnotations[3].fdBoundingPoly.vertices[3].x;
+            var y8 = myObj.faceAnnotations[3].fdBoundingPoly.vertices[3].y;
+            document.getElementById("face4").innerHTML = JSON.stringify(" Face 4 <br>"+ x1 + " - " + y1 + " <br> " + x2 + " - " + y2 + " <br> " + x3 + " - " + y3 + " <br> " + x4 + " - " + y4);
+            document.getElementById("face4.1").innerHTML = JSON.stringify(" "+ x5 + " - " + y5 + " <br> " + x6 + " - " + y6 + " <br> " + x7 + " - " + y7 + " <br> " + x8 + " - " + y8);
+        }
+    };
+    xmlhttp.open("GET", "dummy_image_data.json", true);
+    xmlhttp.send();
+</script>
+
+<script class="face5">
+
+    // URL dummy_image_data.json
+    //faceAnnotations[boundingPoly].vertices[0].x
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+
+            if (this.readyState == 4 && this.status == 200) {
+            var myObj = JSON.parse(this.responseText);
+            var x1 = myObj.faceAnnotations[4].boundingPoly.vertices[0].x;
+            var y1 = myObj.faceAnnotations[4].boundingPoly.vertices[0].y;
+            var x2 = myObj.faceAnnotations[4].boundingPoly.vertices[1].x;
+            var y2 = myObj.faceAnnotations[4].boundingPoly.vertices[1].y;
+            var x3 = myObj.faceAnnotations[4].boundingPoly.vertices[2].x;
+            var y3 = myObj.faceAnnotations[4].boundingPoly.vertices[2].y;
+            var x4 = myObj.faceAnnotations[4].boundingPoly.vertices[3].x;
+            var y4 = myObj.faceAnnotations[4].boundingPoly.vertices[3].y;
+
+            var x5 = myObj.faceAnnotations[4].fdBoundingPoly.vertices[0].x;
+            var y5 = myObj.faceAnnotations[4].fdBoundingPoly.vertices[0].y;
+            var x6 = myObj.faceAnnotations[4].fdBoundingPoly.vertices[1].x;
+            var y6 = myObj.faceAnnotations[4].fdBoundingPoly.vertices[1].y;
+            var x7 = myObj.faceAnnotations[4].fdBoundingPoly.vertices[2].x;
+            var y7 = myObj.faceAnnotations[4].fdBoundingPoly.vertices[2].y;
+            var x8 = myObj.faceAnnotations[4].fdBoundingPoly.vertices[3].x;
+            var y8 = myObj.faceAnnotations[4].fdBoundingPoly.vertices[3].y;
+            document.getElementById("face5").innerHTML = JSON.stringify("Face 5 <br> "+ x1 + " - " + y1 + " <br> " + x2 + " - " + y2 + " <br> " + x3 + " - " + y3 + " <br> " + x4 + " - " + y4);
+            document.getElementById("face5.1").innerHTML = JSON.stringify(" "+ x5 + " - " + y5 + " <br> " + x6 + " - " + y6 + " <br> " + x7 + " - " + y7 + " <br> " + x8 + " - " + y8);
+        }
+    };
+    xmlhttp.open("GET", "dummy_image_data.json", true);
+    xmlhttp.send();
+</script>
+
+</body>
+</html>
