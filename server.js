@@ -20,7 +20,7 @@ const vision = require('@google-cloud/vision');
 const client = new vision.ImageAnnotatorClient();
 
 
-//Local file path (POC)
+//Local file path (sandbox)
 
 //const fileName = 'test-photos/test2.jpg';
 
@@ -126,7 +126,7 @@ const vision = require('@google-cloud/vision');
 const client = new vision.ImageAnnotatorClient();
 
 
-//Local file path (POC)
+//Local file path (sandbox)
 const fileName = 'test-photos/test1.jpg';
 //const fileName = 'test-photos/test2.jpg';
 
