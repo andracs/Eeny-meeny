@@ -193,3 +193,42 @@ body {
     background-color: #6492E8;
 }
 
+
+/* CSS for the Help.HTML file */
+
+.header{
+    font-size: 32px;
+    font-style: normal;
+    font-family: "Courier New", Courier, monospace;
+    color: darkblue;
+    text-align: center;
+}
+
+#think {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#helpbody {
+    background-color: black;
+}
+
+.Back {
+    border: none;
+    color: darkblue;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+    font-family: "Courier New", Courier, monospace;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: black;
+
+}
+.Back:hover {
+    background-color: white;
+}
