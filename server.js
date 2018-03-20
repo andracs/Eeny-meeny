@@ -27,8 +27,8 @@ client
       let y = face.boundingPoly.vertices[0].y;
       let w = face.boundingPoly.vertices[2].x - x;
       let h = face.boundingPoly.vertices[2].y - y;
-      cropImage(fileName,"face"+ i, x,y,w,h);
-      });
+      cropImage(fileName, "face" + i, x, y, w, h);
+    });
   })
   .catch(err => {
     console.error('ERROR:', err);
@@ -36,14 +36,14 @@ client
 
 
 //Gets image, should write a new local file cropped to fit the faces
-function cropImage(src,newName, x1, y1, x2, y2) {
+function cropImage(src, newName, x1, y1, x2, y2) {
   console.log("cropping");
-  console.log("DEBUG: x:" + x1 + " y :" + y1 + "\n w: " + x2 + " h: " + y2 );
-  Jimp.read(src, function (err, src) {
+  console.log("DEBUG: x:" + x1 + " y :" + y1 + "\n w: " + x2 + " h: " + y2);
+  Jimp.read(src, function(err, src) {
     if (err) throw err;
-    src.crop( x1, y1, x2, y2 )
-    .write("faces/" + newName + ".jpg");
+    src.crop(x1, y1, x2, y2)
+      .write("faces/" + newName + ".jpg");
 
 
-});
+  });
 }
