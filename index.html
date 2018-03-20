@@ -2,10 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-      <link rel="stylesheet" href="croppie.css" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="croppie.js"></script>
+    <title>index</title>
     <script>
         var basic = $('#demo-basic').croppie({
             viewport: {
@@ -14,6 +11,7 @@
             }
         });
         basic.croppie('bind', {
+            url: 'demo/cat.jpg',
             points: [77,469,280,739]
         });
         //on button click
@@ -21,20 +19,9 @@
             // html is div (overflow hidden)
             // with img positioned inside.
         });
-        $('#x').click(function(){
-            var d = basic.croppie('get');   $('#result').html(JSON.stringify(d));
-        });
     </script>
-
 </head>
 <body>
-<h1>Test</h1>
-<input type='button' id='x' value='Save Crop Info' />
-<span id='result'></span>
-<img class="my-image" src="test1.jpg" />
-<div id="demo-basic"></div>
-
-
 
 </body>
 </html>

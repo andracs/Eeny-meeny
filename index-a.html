@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="javascript/js.js"></script>
+    <script src="javascript/tabController.js"></script>
 </head>
 <body>
 
@@ -15,10 +15,19 @@
 
 <div class="tabMenu">
     <ul class="tabList">
-        <li class="tabItem"><a class="active" href="#takepic">Take Picture</a></li>
-        <li class="tabItem"><a class="inactive" href="#uploadpic">Upload Picture</a></li>
-        <li class="tabItem"><a class="inactive" href="#help">Help</a></li>
+        <li class="tabItem" onclick="takePicTab()"><a class="active" id="tab1" href="#takepic">Take Picture</a></li>
+        <li class="tabItem" onclick="uploadPicTab()"><a class="inactive" id="tab2" href="#uploadpic">Upload Picture</a></li>
+        <li class="tabItem" onclick="helpTab()"><a class="inactive" id="tab3" href="#help">Help</a></li>
     </ul>
+</div>
+
+<div class="middle-content">
+    <div class="img-cotainer">
+        <img class="img-holder" src="resources/imag-holder.PNG">
+    </div>
+    <div class="button-container">
+        <button class="takePicBtn">Take a picture</button>
+    </div>
 </div>
 
 </body>
