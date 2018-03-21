@@ -126,11 +126,14 @@ body {
     text-align: center;
     text-decoration: none;
     text-shadow: 1px 1px black;
-    display: inline-block;
+    display: block;
     font-size: 16px;
     font-variant: small-caps;
-    margin: 4px 2px;
+    margin: auto;
     cursor: pointer;
+
+
+
 
 }
 
@@ -175,10 +178,13 @@ body {
 
 #testPhoto {
     border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+
 }
-
-
-/* CSS for the TakePicture.HTML file */
 
 #startinfo {
     font-variant: small-caps;
@@ -208,27 +214,30 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 10px;
 }
 
 
 #helpbody {
-    background-color: black;
+    background-color: #6492E8
 }
 
 .Back {
     border: none;
-    color: darkblue;
+    color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 32px;
-    font-family: "Courier New", Courier, monospace;
-    margin: 4px 2px;
+    text-shadow: 1px 1px black;
+    display: block;
+    font-size: 16px;
+    font-variant: small-caps;
+    margin: auto;
     cursor: pointer;
-    background-color: black;
+    background-color: #1C5299;
 
 }
 .Back:hover {
-    background-color: white;
+    background-color: #685a8b;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
